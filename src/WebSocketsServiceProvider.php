@@ -23,7 +23,12 @@ class WebSocketsServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/websockets.php' => base_path('config/websockets.php'),
+
         ], 'config');
+        $this->publishes([
+            __DIR__ . '/../app/Http/Services/SocketService.php' => base_path('app/Http/Services/SocketService.php'),
+
+        ], 'services');
 
         $this->publishes([
             __DIR__.'/../database/migrations/0000_00_00_000000_create_websockets_statistics_entries_table.php' => database_path('migrations/0000_00_00_000000_create_websockets_statistics_entries_table.php'),

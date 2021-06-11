@@ -2,6 +2,8 @@
 
 namespace Jonykpi\LaravelWebSockets\WebSockets\Messages;
 
+use App\Http\Services\SocketService;
+use Illuminate\Support\Facades\Log;
 use Jonykpi\LaravelWebSockets\WebSockets\Channels\ChannelManager;
 use Illuminate\Support\Str;
 use Ratchet\ConnectionInterface;
@@ -31,7 +33,10 @@ class PusherChannelProtocolMessage implements PusherMessage
     {
         $eventName = Str::camel(Str::after($this->payload->event, ':'));
 
+
         if (method_exists($this, $eventName) && $eventName !== 'respond') {
+            
+         
             call_user_func([$this, $eventName], $this->connection, $this->payload->data ?? new stdClass());
         }
     }

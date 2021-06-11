@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Log;
 use Ratchet\ConnectionInterface;
 use Ratchet\RFC6455\Messaging\MessageInterface;
 use Ratchet\WebSocket\MessageComponentInterface;
+use App\Http\Services\SocketService;
 
 class WebSocketHandler implements MessageComponentInterface
 {
@@ -38,10 +39,12 @@ class WebSocketHandler implements MessageComponentInterface
 
     public function onMessage(ConnectionInterface $connection, MessageInterface $message)
     {
+
         $message = PusherMessageFactory::createForMessage($message, $connection, $this->channelManager);
 
+
         $message->respond();
-        Log::info("sasasasasasas :hjhj");
+
 
         StatisticsLogger::webSocketMessage($connection);
     }
