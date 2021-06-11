@@ -1,23 +1,17 @@
 {
-    "name": "beyondcode/laravel-websockets",
+    "name": "jonykpi/laravel-websockets",
     "description": "An easy to use WebSocket server",
     "keywords": [
-        "beyondcode",
+        "jonykpi",
         "laravel-websockets"
     ],
-    "homepage": "https://github.com/beyondcode/laravel-websockets",
+    "homepage": "https://github.com/jonykpi/laravel-websockets",
     "license": "MIT",
     "authors": [
         {
-            "name": "Marcel Pociot",
-            "email": "marcel@beyondco.de",
-            "homepage": "https://beyondcode.de",
-            "role": "Developer"
-        },
-        {
-            "name": "Freek Van der Herten",
-            "email": "freek@spatie.be",
-            "homepage": "https://spatie.be",
+            "name": "jony das",
+            "email": "djony620@gmail.com",
+            "homepage": "",
             "role": "Developer"
         }
     ],
@@ -45,12 +39,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Jony\\LaravelWebSockets\\": "src"
+            "Jonykpi\\LaravelWebSockets\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Jony\\LaravelWebSockets\\Tests\\": "tests"
+            "Jonykpi\\LaravelWebSockets\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -64,10 +58,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Jony\\LaravelWebSockets\\WebSocketsServiceProvider"
+                "Jonykpi\\LaravelWebSockets\\WebSocketsServiceProvider"
             ],
             "aliases": {
-                "WebSocketRouter": "Jony\\LaravelWebSockets\\Facades\\WebSocketRouter"
+                "WebSocketRouter": "Jonykpi\\LaravelWebSockets\\Facades\\WebSocketRouter"
             }
         }
     }
