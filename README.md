@@ -6,7 +6,7 @@ Bring the power of WebSockets to your Laravel application. Drop-in Pusher replac
 
 For installation instructions, in-depth usage and deployment details, please take a look at the [official documentation](https://docs.beyondco.de/laravel-websockets/).
 
-### php artisan vendor:publish --provider="Jonykpi\LaravelWebSockets\WebSocketsServiceProvider"
+### php artisan vendor:publish --provider="Jonykpi\LaravelWebSockets\WebSocketsServiceProvider" --tag="migrations"
 
 ### Changelog
 
