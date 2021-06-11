@@ -41,7 +41,7 @@ class WebSocketHandler implements MessageComponentInterface
         $message = PusherMessageFactory::createForMessage($message, $connection, $this->channelManager);
 
         $message->respond();
-        Log::info("sasasasasasas");
+        Log::info("sasasasasasas :hjhj");
 
         StatisticsLogger::webSocketMessage($connection);
     }
